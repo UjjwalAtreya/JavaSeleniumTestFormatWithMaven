@@ -1,6 +1,8 @@
 # JavaSeleniumTestFormat
 This is a simple format to write test in Java Selenium, with users of Listeners, Threads for parallel testing, Test Suits,Maven Project
 
+Make sure you run selenium grid and provide hub ip in testNg.xml File under hubUrl.
+
 1. Make sure you import all the dependencies first
 2. To run the test enter the command (mvn test -DsuiteXmlFile=testng.xm) in the terminal
 3. All the page object should be written in src/main/java/(your page Name Folder)/PageName
