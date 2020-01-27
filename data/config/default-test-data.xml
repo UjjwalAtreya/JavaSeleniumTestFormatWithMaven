@@ -3,7 +3,7 @@
 <properties>
     <comment>Smartflow Test-Automation config</comment>
 
-    <entry key="BaseUrl">https://sf70-test.88degree.nl</entry>
+    <entry key="BaseUrl">(Your URL here)</entry>
     <entry key="HomePage">main.aspx</entry>
     <entry key="OpeningPage">bulletins.aspx</entry>
 
@@ -13,8 +13,8 @@
     <entry key="SpecialCharacter">#@$%$</entry>
 
     <!-- Login Test Combinations -->
-    <entry key="ValidUserName">88admin</entry>
-    <entry key="ValidPassword">vqgztA7vzds=c2ZSdWxlJDE3</entry>
+    <entry key="ValidUserName">UserName</entry>
+    <entry key="ValidPassword">password</entry>
 
     <entry key="InvalidUserName">UserInvalid</entry>
     <entry key="InvalidPassword">vqgztA7vzds=c2ZSdWxlJDE3</entry>
@@ -22,7 +22,7 @@
     <entry key="InvalidUserName">UserInvalid</entry>
     <entry key="ValidPassword">vqgztA7vzds=c2ZSdWxlJDE3</entry>
 
-    <entry key="ValidUserName">88admin</entry>
+    <entry key="ValidUserName">validUserName</entry>
     <entry key="InvalidPassword">PassInvalid</entry>
 
     <entry key="Language">EN</entry>
