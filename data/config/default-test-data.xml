@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-    <comment>Smartflow Test-Automation config</comment>
+    <comment>Test-Automation config</comment>
 
     <entry key="BaseUrl">(Your URL here)</entry>
     <entry key="HomePage">main.aspx</entry>
