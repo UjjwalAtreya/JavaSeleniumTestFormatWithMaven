@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-    <comment>Smartflow Test-Automation config</comment>
+    <comment>Test-Automation config</comment>
     <entry key="BaseUrl">(Your URL Here)</entry>
     <!--credentials to send email-->
     <entry key="emailId">(Email sender Here)</entry>
@@ -12,7 +12,7 @@
     <entry key="validUserName">(ujjwal)</entry>
     <entry key="validPassword">FbDhp7h9G3U=YWJjZGVm</entry>
     <entry key="domain">test70</entry>
-    <entry key="mainPageUrl">https://test.smartflowcloud.com/v70/#!/main</entry>
+    <entry key="mainPageUrl">https:{URL}/v70/#!/main</entry>
 
     <!--InvalidCredentials-->
     <entry key="InvalidUserName">invalid</entry>
