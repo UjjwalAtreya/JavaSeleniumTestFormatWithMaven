@@ -7,7 +7,6 @@ import org.testng.IInvokedMethodListener;
 import org.testng.ITestResult;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 
 public class WebDriverListener implements IInvokedMethodListener {
 
@@ -17,11 +16,7 @@ public class WebDriverListener implements IInvokedMethodListener {
             WebDriver driver = null;
             try {
                 driver = BaseTest.createInstance();
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (EmailException e) {
+            } catch (IOException | EmailException e) {
                 e.printStackTrace();
             }
             Helper.setWebDriver(driver);
