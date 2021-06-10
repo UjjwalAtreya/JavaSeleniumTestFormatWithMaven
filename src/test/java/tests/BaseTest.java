@@ -1,7 +1,6 @@
 package tests;
 
 import org.apache.commons.mail.EmailException;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
