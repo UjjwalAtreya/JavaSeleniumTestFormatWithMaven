@@ -25,29 +25,7 @@ public class Helper {
         prop = new Properties();
     }
 
-    public static void readConfig(String configFileName) {
-        try {
-            if (configFileName == null || Strings.isNullOrEmpty(configFileName)) {
-                configFileName = "default-test-data.xml";
-            }
-            File file = new File(dataFolderBasePath + configFileName);
 
-            if (!file.exists()) {
-                configFileName = "default-test-data.xml";
-                file = new File(dataFolderBasePath + configFileName);
-            }
-            FileInputStream fileInput = new FileInputStream(file);
-            prop.loadFromXML(fileInput);
-
-            fileInput.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
 
     //Take screenshot for failed test
@@ -81,72 +59,6 @@ public class Helper {
             }
         }
     }
-
-    //wait time for pop up
-    public static String handelPopUp() {
-        int waitTime = 20; //Default wait time
-
-        return handelPopUp(waitTime);
-    }
-
-    //Pop up Handel pop up
-    public static String handelPopUp(int waitTime) {
-        String alterText;
-        try {
-            new WebDriverWait(getDriver(), waitTime).until(ExpectedConditions.alertIsPresent());
-
-            Alert alert = getDriver().switchTo().alert();
-            alterText = getDriver().switchTo().alert().getText();
-            alert.accept();
-
-            return alterText;
-        } catch (UnhandledAlertException e) {
-            Helper.getDriver().switchTo().alert().accept();
-            return "";
-        } catch (NoAlertPresentException e) {
-            return "";
-        } catch (TimeoutException e) {
-            return "";
-        } catch (Exception e) {
-            return "";
-        }
-    }
-
-
-    private static Random random = new SecureRandom();
-
-
-
-
-    public static String dateTimeStamp() {
-        //Creating Date Time stamp
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-        Date date = new Date();
-        String dateTimeStamp = dateFormat.format(date);
-        //System.out.println("Current date and time is " +dateTimeStamp);
-        return dateTimeStamp;
-    }
-
-    public static String dateStamp() {
-        //Creating Date Time stamp
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = new Date();
-        String dateStamp = dateFormat.format(date);
-        //System.out.println("Current date and time is " +dateTimeStamp);
-        return dateStamp;
-    }
-
-    public static String timeStamp() {
-
-        //Creating Date Time stamp
-        DateFormat timeFormat = new SimpleDateFormat("HH:mm");
-        Date date = new Date();
-        String timeStamp = timeFormat.format(date);
-        //System.out.println("Current date and time is " +dateTimeStamp);
-        return timeStamp;
-    }
-
-
 
     // LocalWebDriverManager
     private static ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
